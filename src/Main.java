@@ -1,37 +1,33 @@
 import java.util.Scanner;
 
-//문제파악
-  //두 정수 A와 B를 입력받은 다음, A+B를 출력하는 프로그램을 작성하시오
-    //입력값은  (0 < A, B < 10) 따라야 한다.
-    // = 두 정수를 입력해 합을 출력
+//baekjoon_analysis.txt
 
-//유추파악//두 정수를 입력해 합을 출력
-
-//주요 단어 영문 이름 선정
-//입력 input / 정수 decimal /출력 output /합 plus
 public class Main {
-    //두 정수 합 구함 
-    public int plus(int input_first, int input_second) {
-        int output_plus = input_first + input_second;
-        return output_plus;
+//     -테스트 케이스
+// 3 -->6
+// 5 -->15
+// 1 --> 1
+public int sum(int input) {
+    int sum = 0;
+    for (int i = 1; i <= input; i++) {
+        sum = sum + i;
     }
-
-
+    return sum;
+}
     public static void main(String[] args) {
-// 백준 & 프로그램 순서를 꼭 지키자.
-//테스트 케이스 3+5 = 8/ 20+50 = 70 / -1+5 =error
-//프로그래밍 순서 입력/ 처리 / 출력 
-//try-on 실패 시 원인기록!
-        //입력
-        Scanner scanner = new Scanner(System.in);
-        int input_first = scanner.nextInt();
-        int input_second = scanner.nextInt();
-        scanner.close();
-        //처리
-        Main main = new Main();
-        int output_plus = main.plus(input_first, input_second);
-        
-        //출력
-        System.out.println(output_plus);
+
+// -프로그래밍 순서
+// 반복값 입력
+    Scanner scanner = new Scanner(System.in);
+    int input = scanner.nextInt();
+    scanner.close();
+
+
+// 합 구함
+Main main = new Main();
+int output = main.sum(input);
+
+// 합한 값 출력
+System.out.println(output);
     }
 }
